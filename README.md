@@ -28,7 +28,9 @@ Before we begin, please set up a Windows Virtual Machine in Azure. For guidance,
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/1.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+First, within the VM (osticket-vm), download the osTicket-Installation-Files.zip --> [https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD] and unzip it onto your windows vm desktop. The folder should be called “osTicket-Installation-Files”
+
+Then open to Control Panel -> Programs -> Program and Features -> Turn Windows features on or off
 </p>
 <br />
 

@@ -28,7 +28,7 @@ Before we begin, please set up a Windows Virtual Machine in Azure. For guidance,
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/1.png"/>
 </p>
 <p>
-First, within the VM (osticket-vm), download the osTicket-Installation-Files.zip --> [https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD] and unzip it onto your windows vm desktop. The folder should be called “osTicket-Installation-Files”
+First, within the VM (osticket-vm), download the osTicket-Installation-Files.zip --> [https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD] and unzip (extract all) this file onto your windows vm desktop. The folder should be called “osTicket-Installation-Files”
 
 Then open to Control Panel -> Programs -> Program and Features -> Turn Windows features on or off
 </p>
@@ -38,7 +38,7 @@ Then open to Control Panel -> Programs -> Program and Features -> Turn Windows f
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/2.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Expand IIS and click World Wide Web Services -> Application Development Features -> and check the CGI box. (I expanded the files so you could see how to get there)
 </p>
 <br />
 
@@ -46,7 +46,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/3.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Open up Internet Explorer and type into the address bar "127.0.0.1" to load the IIS page. This is the loopback address of the default webpage for the IIS. If you did this correct, it should look like the example on the right!
 </p>
 <br />
 
@@ -54,7 +54,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/4.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Open the "osTicket-Installation-Files" from your windows vm desktop. From this file, install the PHP manager "PHPManagerForIIS_V1.5.0.msi" and then install the Rewrite Module "rewrite_amd64_en-US.msi". (see top right) 
+
+Then, create the directory C:\PHP by going into the C drive and creating a new folder titled "PHP". (see top bottom left)
+
+From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 "php-7.3.8-nts-Win32-VC15-x86.zip" into the “C:\PHP” folder. (see middle)
 </p>
 <br />
 
@@ -62,7 +66,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/5.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Going back to the “osTicket-Installation-Files” folder, install VC_redist.x86.exe. and install MySQL 5.5.62 "mysql-5.5.62-win32.msi"
+
+For the SQL setup follow these instructions below:
+
+Typical Setup -> Launch Configuration Wizard (after install) -> Standard Configuration -> Username: root Password: root
+
+(BE SURE TO ENTER IN THE USERNAME AND PASSWORD CORRECTLY)
 </p>
 <br />
 
@@ -70,7 +80,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/6.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, open IIS and run it as administrator. Within IIS, open the PHP manager. Then select "Register new PHP version" and enter in "C:\PHP\php-cgi.exe"
 </p>
 <br />
 
@@ -78,7 +88,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/7.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+At this point, STOP and START the IIS. From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” and copy the “upload” folder into “c:\inetpub\wwwroot” Within “c:\inetpub\wwwroot”, rename “upload” to “osTicket”. Once all is completed, STOP and START the IIS again.
 </p>
 <br />
 
@@ -86,7 +96,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/8.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In the IIS, Go to sites -> Default -> osTicket On the right, click “Browse *:80”
+
+A new site will appear on our browser. Go back to IIS, sites -> Default -> osTicket. Select osTicket and double-click PHP Manager. Click “Enable or disable an extension” Enable: "php_imap.dll" Enable: "php_intl.dll" Enable: "php_opcache.dll"
+
+Now refresh the osTicket site in your browser.
 </p>
 <br />
 
@@ -94,7 +108,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/9.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now lets rename: "ost-config.php"
+
+From: "C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php" To: "C:\inetpub\wwwroot\osTicket\include\ost-config.php"
+
+From "ost-config.php", right click to access properties and select "Advanced". We will disable inheritance and remove all inherited permissions.
 </p>
 <br />
 

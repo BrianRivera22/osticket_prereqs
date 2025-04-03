@@ -117,18 +117,11 @@ From "ost-config.php", right click to access properties and select "Advanced". W
 <br />
 
 <p>
-<img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/10.png"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/11.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, click "Add", make sure that "Write" permissions are checked. Click "Select a princpial", enter "everyone", and select "Check Names". 
+BE SURE TO APPLY CHANGES
 </p>
 <br />
 
@@ -136,7 +129,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/12.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Back in our browser, we can click continue and set up osTicket. All of the information here can be filled however you want. Do not fill it out completely, we will come back to it.
 </p>
 <br />
 
@@ -144,7 +137,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/13.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+From the “osTicket-Installation-Files” folder, install HeidiSQL. Open Heidi SQL, create a new session, enter root/root, click open and create a database called “osTicket”
+
+Back in the browser, fill out the remaining blanks.
+
+MySQL Database: osTicket
+
+MySQL Username: root
+
+MySQL Password: root
+
+Click “Install Now!”
 </p>
 <br />
 
@@ -152,6 +155,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/BrianRivera22/osticket_prereqs/blob/main/os%20ticket%20prereqs/14.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Congratulations! Your osTicket is now setup. Browse to your help desk login page: http://localhost/osTicket/scp/login.php
 </p>
 <br />

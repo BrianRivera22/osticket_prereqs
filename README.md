@@ -18,7 +18,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-Before we begin, please set up a Windows Virtual Machine in Azure. For guidance, you can refer to step 1 from my azure_network_protocols project --> [https://github.com/BrianRivera22/azure_network_protocols/blob/main/README.md]
+Before we begin, please set up a Windows Virtual Machine in Azure. For guidance, you can refer to step 1 from my azure_network_protocols project --> [https://github.com/BrianRivera22/azure_network_protocols/]
 
 (4 vCPU's and 8Gib memory should be sufficient)
 
